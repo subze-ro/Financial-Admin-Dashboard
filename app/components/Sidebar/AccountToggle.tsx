@@ -9,6 +9,8 @@ const AccountToggle = () => {
         <Image
           src="https://api.dicebear.com/9.x/notionists/svg"
           alt="avatar"
+          width={32} // Add width
+          height={32} // Add height
           className="size-8 rounded shrink-0 bg-cyan-300 shadow"
         />
         <div className="text-start">
