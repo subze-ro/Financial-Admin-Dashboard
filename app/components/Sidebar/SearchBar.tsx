@@ -3,7 +3,7 @@ import React from "react";
 
 import { FiCommand, FiSearch } from "react-icons/fi";
 import { useState } from "react";
-import { CommandMenu } from "./CommandMenu";
+
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
@@ -24,9 +24,10 @@ const SearchBar = () => {
           <FiCommand /> K
         </span>
       </div>
-      <CommandMenu open={open} setOpen={setOpen} />
+     
     </>
   );
 };
+
 
 export default SearchBar;
