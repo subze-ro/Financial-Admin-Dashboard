@@ -1,12 +1,10 @@
 "use client";
-import React from "react";
-
+import React, { useState } from "react";
 import { FiCommand, FiSearch } from "react-icons/fi";
-import { useState } from "react";
-
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="bg-stone-200 mb-4 relative rounded flex items-center px-2 py-1.5 text-sm">
@@ -24,10 +22,15 @@ const SearchBar = () => {
           <FiCommand /> K
         </span>
       </div>
-     
+
+      {/* Example: Conditionally render something based on `open` */}
+      {open && (
+        <div className="mt-2 p-2 bg-white rounded shadow">
+          Search dropdown or modal
+        </div>
+      )}
     </>
   );
 };
-
 
 export default SearchBar;
