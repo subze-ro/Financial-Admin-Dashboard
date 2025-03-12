@@ -1,6 +1,8 @@
 "use client";
+
 import React, { useState } from "react";
 import { FiCommand, FiSearch } from "react-icons/fi";
+import { CommandMenu } from "./CommandMenu";
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
@@ -15,20 +17,16 @@ const SearchBar = () => {
             setOpen(true);
           }}
           type="text"
-          placeholder="search"
+          placeholder="Search"
           className="w-full bg-transparent placeholder:text-stone-400 focus:outline-none"
         />
+
         <span className="p-1 text-xs flex gap-0.5 items-center shadow bg-stone-50 rounded absolute right-1.5 top-1/2 -translate-y-1/2">
-          <FiCommand /> K
+          <FiCommand />K
         </span>
       </div>
 
-      {/* Example: Conditionally render something based on `open` */}
-      {open && (
-        <div className="mt-2 p-2 bg-white rounded shadow">
-          Search dropdown or modal
-        </div>
-      )}
+      <CommandMenu open={open} setOpen={setOpen} />
     </>
   );
 };
